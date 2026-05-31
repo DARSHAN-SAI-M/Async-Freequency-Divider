@@ -28,7 +28,7 @@ The fundamental building block. A positive-edge-triggered JK flip-flop with asyn
 | `k`  | Input     | K input                  |
 | `y`  | Output    | Q output                 |
 
-**Truth Table:**
+**Behavioral Table:**
 
 | J | K | Action         |
 |---|---|----------------|
@@ -50,10 +50,10 @@ Top-level module. Instantiates four `Jk_ff` modules in a ripple counter configur
 | `y`  | Output    | Divided clock (f_out = f_in / 16)  |
 
 **Block Diagram:**
-```
-clk ──► [JK1] ──w1──► [JK2] ──w2──► [JK3] ──w3──► [JK4] ──► y
-         ÷2             ÷2             ÷2             ÷2
-```
+<br>
+
+
+<img width="2099" height="869" alt="image" src="https://github.com/user-attachments/assets/9da90cae-da29-452e-8627-f77402b5e5ca" />
 
 ---
 
@@ -79,9 +79,12 @@ This project was developed in **Vivado**. To simulate:
 **Expected output frequency:**
 ```
 f_out = f_in / 16
-<img width="2156" height="450" alt="image" src="https://github.com/user-attachments/assets/f7ab495e-9203-41dd-ad16-a5db810c44b6" />
-
 ```
+**Waveform** 
+
+
+<img width="2156" height="450" alt="image" src="https://github.com/user-attachments/assets/fee02984-4bfa-4937-82ee-900f9a6b08d1" />
+
 For a 50 MHz input clock → output is **3.125 MHz**.
 
 ---
